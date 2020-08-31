@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+
+    <EditText
+        android:id="@+id/SIGN_UP_NAME"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="Enter full n ame"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/SIGN_UP_PHONE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/SIGN_UP_PHONE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:hint="Enter phone no"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/SIGN_UP_MAIL"
+        app:layout_constraintStart_toStartOf="@+id/SIGN_UP_NAME"
+        app:layout_constraintTop_toBottomOf="@+id/SIGN_UP_NAME" />
+
+    <EditText
+        android:id="@+id/SIGN_UP_MAIL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:hint="Enter email "
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/SIGN_UP_PASSWORD"
+        app:layout_constraintStart_toStartOf="@+id/SIGN_UP_PHONE"
+        app:layout_constraintTop_toBottomOf="@+id/SIGN_UP_PHONE" />
+
+
+    <Button
+        android:id="@+id/BUTTON_CREATE_ACCOUNT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="115dp"
+        android:layout_marginBottom="98dp"
+        android:text="Create account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SPINNER_DIVISION" />
+
+    <EditText
+        android:id="@+id/SIGN_UP_PASSWORD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Enter passsword"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/SPINNER_BLOOD_GROUP"
+        app:layout_constraintStart_toStartOf="@+id/SIGN_UP_MAIL"
+        app:layout_constraintTop_toBottomOf="@+id/SIGN_UP_MAIL" />
+
+    <Spinner
+        android:id="@+id/SPINNER_BLOOD_GROUP"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/CHECKBOX_IS_RECOVERED"
+        app:layout_constraintEnd_toEndOf="@+id/SPINNER_DIVISION"
+        app:layout_constraintStart_toStartOf="@+id/SPINNER_DIVISION"
+        app:layout_constraintTop_toBottomOf="@+id/SIGN_UP_PASSWORD" />
+
+    <CheckBox
+        android:id="@+id/CHECKBOX_IS_RECOVERED"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="36dp"
+        android:text="Recovered from Covid19"
+        app:layout_constraintBottom_toTopOf="@+id/SPINNER_DIVISION"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SPINNER_BLOOD_GROUP" />
+
+    <Spinner
+        android:id="@+id/SPINNER_DIVISION"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/BUTTON_CREATE_ACCOUNT"
+        app:layout_constraintEnd_toEndOf="@+id/CHECKBOX_IS_RECOVERED"
+        app:layout_constraintStart_toStartOf="@+id/CHECKBOX_IS_RECOVERED"
+        app:layout_constraintTop_toBottomOf="@+id/CHECKBOX_IS_RECOVERED" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
